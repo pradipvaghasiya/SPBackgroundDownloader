@@ -136,7 +136,14 @@ class SPBackgroundDownloader : NSObject{
     private func sendCompletionMessageIfAllDownloaded(){
         if #available(iOS 9.0, *) {
             session?.getAllTasksWithCompletionHandler{ tasks in
-                if tasks.count <= 1{
+                let runningTasksCount = tasks.filter{
+                    if $0.state == .Running{
+                        return true
+                    }
+                    return false
+                }.count
+                
+                if runningTasksCount == 0{
                     dispatch_async(dispatch_get_main_queue()){
                         self.delegate?.allDownloadCompleted()
                     }
@@ -144,8 +151,14 @@ class SPBackgroundDownloader : NSObject{
             }
         } else {
             session?.getTasksWithCompletionHandler{dataTasks, uploadTasks, downloadTasks in
-                let pendingTasks = dataTasks.count + uploadTasks.count + downloadTasks.count
-                if pendingTasks <= 1{
+                let runningTasksCount = downloadTasks.filter{
+                    if $0.state == .Running{
+                        return true
+                    }
+                    return false
+                    }.count
+                
+                if runningTasksCount == 0{
                     dispatch_async(dispatch_get_main_queue()){
                         self.delegate?.allDownloadCompleted()
                     }
@@ -183,6 +196,9 @@ extension SPBackgroundDownloader : NSURLSessionDownloadDelegate{
 
     func URLSession(session: NSURLSession, task: NSURLSessionTask, didCompleteWithError error: NSError?){
         print("\(task.taskIdentifier): Task completed \(task.taskIdentifier) with error: \(error)")
+        if error != nil {
+            reset()
+        }
         sendCompletionMessageIfAllDownloaded()
     }
     

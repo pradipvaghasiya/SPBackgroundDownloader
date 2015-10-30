@@ -46,10 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPBackgroundDownloaderApp
     func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
         print("handleEventsForBackgroundURLSession")
         backgroundSessionCompletionHandler = completionHandler
-        
-        if identifier == kSPBackgroundDownloaderSessionIdentifier{
-            SPBackgroundDownloader.downloader
-        }
     }
 
 }
