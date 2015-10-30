@@ -16,6 +16,11 @@
 		3288E2751BE3C4BA00197AAB /* NSFileManager+Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288E2741BE3C4BA00197AAB /* NSFileManager+Documents.swift */; };
 		3288E2771BE3CC6800197AAB /* NSURL+WebURLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288E2761BE3CC6800197AAB /* NSURL+WebURLPath.swift */; };
 		3288E2791BE3CD4800197AAB /* String+WebURLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3288E2781BE3CD4800197AAB /* String+WebURLPath.swift */; };
+		32A766801BE3FE0C00D2144B /* SPBackgroundDownloader+Sesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A7667F1BE3FE0C00D2144B /* SPBackgroundDownloader+Sesson.swift */; };
+		32A766821BE3FE1600D2144B /* SPBackgroundDownloader+File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A766811BE3FE1600D2144B /* SPBackgroundDownloader+File.swift */; };
+		32A766841BE3FE7800D2144B /* SPBackgroundDownloader+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A766831BE3FE7800D2144B /* SPBackgroundDownloader+Delegate.swift */; };
+		32A766861BE3FEC200D2144B /* SPBackgroundDownloader+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A766851BE3FEC200D2144B /* SPBackgroundDownloader+SessionDelegate.swift */; };
+		32A766881BE3FEFB00D2144B /* SPBackgroundDownloader+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A766871BE3FEFB00D2144B /* SPBackgroundDownloader+Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		3288E2741BE3C4BA00197AAB /* NSFileManager+Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Documents.swift"; sourceTree = "<group>"; };
 		3288E2761BE3CC6800197AAB /* NSURL+WebURLPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURL+WebURLPath.swift"; sourceTree = "<group>"; };
 		3288E2781BE3CD4800197AAB /* String+WebURLPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+WebURLPath.swift"; sourceTree = "<group>"; };
+		32A7667F1BE3FE0C00D2144B /* SPBackgroundDownloader+Sesson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPBackgroundDownloader+Sesson.swift"; sourceTree = "<group>"; };
+		32A766811BE3FE1600D2144B /* SPBackgroundDownloader+File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPBackgroundDownloader+File.swift"; sourceTree = "<group>"; };
+		32A766831BE3FE7800D2144B /* SPBackgroundDownloader+Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPBackgroundDownloader+Delegate.swift"; sourceTree = "<group>"; };
+		32A766851BE3FEC200D2144B /* SPBackgroundDownloader+SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPBackgroundDownloader+SessionDelegate.swift"; sourceTree = "<group>"; };
+		32A766871BE3FEFB00D2144B /* SPBackgroundDownloader+Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SPBackgroundDownloader+Users.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +72,31 @@
 		3288E25D1BE388D700197AAB /* BackgroundDownload */ = {
 			isa = PBXGroup;
 			children = (
+				32A7667E1BE3FDEB00D2144B /* SPBackgroundDownloader */,
 				3288E25E1BE388D700197AAB /* AppDelegate.swift */,
 				3288E2601BE388D700197AAB /* ViewController.swift */,
 				3288E2761BE3CC6800197AAB /* NSURL+WebURLPath.swift */,
 				3288E2781BE3CD4800197AAB /* String+WebURLPath.swift */,
 				3288E2741BE3C4BA00197AAB /* NSFileManager+Documents.swift */,
-				3288E2701BE3890800197AAB /* SPBackgroundDownloader.swift */,
 				3288E2621BE388D700197AAB /* Main.storyboard */,
 				3288E2651BE388D700197AAB /* Assets.xcassets */,
 				3288E2671BE388D700197AAB /* LaunchScreen.storyboard */,
 				3288E26A1BE388D700197AAB /* Info.plist */,
 			);
 			path = BackgroundDownload;
+			sourceTree = "<group>";
+		};
+		32A7667E1BE3FDEB00D2144B /* SPBackgroundDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				32A766871BE3FEFB00D2144B /* SPBackgroundDownloader+Users.swift */,
+				3288E2701BE3890800197AAB /* SPBackgroundDownloader.swift */,
+				32A7667F1BE3FE0C00D2144B /* SPBackgroundDownloader+Sesson.swift */,
+				32A766851BE3FEC200D2144B /* SPBackgroundDownloader+SessionDelegate.swift */,
+				32A766811BE3FE1600D2144B /* SPBackgroundDownloader+File.swift */,
+				32A766831BE3FE7800D2144B /* SPBackgroundDownloader+Delegate.swift */,
+			);
+			name = SPBackgroundDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,11 +171,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3288E2711BE3890800197AAB /* SPBackgroundDownloader.swift in Sources */,
+				32A766841BE3FE7800D2144B /* SPBackgroundDownloader+Delegate.swift in Sources */,
+				32A766881BE3FEFB00D2144B /* SPBackgroundDownloader+Users.swift in Sources */,
 				3288E2771BE3CC6800197AAB /* NSURL+WebURLPath.swift in Sources */,
 				3288E2791BE3CD4800197AAB /* String+WebURLPath.swift in Sources */,
+				32A766821BE3FE1600D2144B /* SPBackgroundDownloader+File.swift in Sources */,
 				3288E2751BE3C4BA00197AAB /* NSFileManager+Documents.swift in Sources */,
 				3288E2611BE388D700197AAB /* ViewController.swift in Sources */,
+				32A766861BE3FEC200D2144B /* SPBackgroundDownloader+SessionDelegate.swift in Sources */,
 				3288E25F1BE388D700197AAB /* AppDelegate.swift in Sources */,
+				32A766801BE3FE0C00D2144B /* SPBackgroundDownloader+Sesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +328,7 @@
 				3288E26F1BE388D700197AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

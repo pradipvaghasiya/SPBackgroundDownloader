@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,9 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF1-9W-fis">
-                                <rect key="frame" x="279" y="290" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF1-9W-fis">
+                                <rect key="frame" x="300" y="64" width="0.0" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Sdu-x8-9ol"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -32,32 +36,95 @@
                                     <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJ0-qH-kcm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="304-0r-xH4">
-                                <rect key="frame" x="254" y="53" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="304-0r-xH4">
+                                <rect key="frame" x="539" y="40" width="41" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dhd-WK-5oc"/>
+                                </constraints>
                                 <state key="normal" title="Crash"/>
                                 <connections>
                                     <action selector="crash:" destination="BYZ-38-t0r" eventType="touchUpInside" id="je6-cY-lra"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kur-z4-rzb">
+                                <rect key="frame" x="20" y="550" width="42" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FY9-eC-VYs"/>
+                                </constraints>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DB0-W8-K5Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlI-HH-Tye">
+                                <rect key="frame" x="525" y="550" width="55" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Resume"/>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="knP-ZC-Zho"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaP-DB-sA9">
+                                <rect key="frame" x="276" y="550" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rso-Sn-wbe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFy-Mi-vQC">
+                                <rect key="frame" x="20" y="500" width="96" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kEY-CG-JwS"/>
+                                </constraints>
+                                <state key="normal" title="Delete all files"/>
+                                <connections>
+                                    <action selector="deleteAllFIles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9w4-CC-9JV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INy-ZI-Y6U">
+                                <rect key="frame" x="40" y="114" width="520" height="366"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zF1-9W-fis" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2ss-b5-gwy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kur-z4-rzb" secondAttribute="bottom" constant="20" id="1Nm-kj-XHz"/>
                             <constraint firstItem="tQm-I7-FTa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="8Kd-Qu-OEQ"/>
+                            <constraint firstItem="KFy-Mi-vQC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ERa-4z-EsU"/>
                             <constraint firstItem="zF1-9W-fis" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K5R-Cn-ICY"/>
+                            <constraint firstItem="Kur-z4-rzb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="KS9-rN-G0q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vlI-HH-Tye" secondAttribute="bottom" constant="20" id="MeF-aW-vC1"/>
+                            <constraint firstItem="Kur-z4-rzb" firstAttribute="top" secondItem="KFy-Mi-vQC" secondAttribute="bottom" constant="20" id="PjP-uk-w8i"/>
+                            <constraint firstItem="KFy-Mi-vQC" firstAttribute="top" secondItem="INy-ZI-Y6U" secondAttribute="bottom" constant="20" id="Sko-q4-2Wi"/>
                             <constraint firstAttribute="trailing" secondItem="304-0r-xH4" secondAttribute="trailing" constant="20" id="Wuh-fK-aow"/>
+                            <constraint firstItem="INy-ZI-Y6U" firstAttribute="centerX" secondItem="zF1-9W-fis" secondAttribute="centerX" id="Y9z-JH-LXF"/>
+                            <constraint firstItem="INy-ZI-Y6U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="amN-Id-UwY"/>
                             <constraint firstItem="tQm-I7-FTa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="gSi-p5-qw5"/>
+                            <constraint firstItem="KaP-DB-sA9" firstAttribute="centerX" secondItem="zF1-9W-fis" secondAttribute="centerX" id="jXH-Sd-k7p"/>
+                            <constraint firstItem="INy-ZI-Y6U" firstAttribute="top" secondItem="zF1-9W-fis" secondAttribute="bottom" constant="20" id="nSz-cI-gFS"/>
+                            <constraint firstAttribute="trailing" secondItem="vlI-HH-Tye" secondAttribute="trailing" constant="20" id="oOI-IZ-hn6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="INy-ZI-Y6U" secondAttribute="trailing" constant="20" id="ocv-9m-qfk"/>
                             <constraint firstItem="304-0r-xH4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="tZf-Sc-JWL"/>
+                            <constraint firstItem="zF1-9W-fis" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="vHc-Dm-EpM"/>
+                            <constraint firstItem="KaP-DB-sA9" firstAttribute="baseline" secondItem="vlI-HH-Tye" secondAttribute="baseline" id="wsA-gV-94I"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="detailLabel" destination="INy-ZI-Y6U" id="4lR-PB-IgS"/>
                         <outlet property="statusLabel" destination="zF1-9W-fis" id="Ope-4D-Ibf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="319" y="225"/>
         </scene>
     </scenes>
 </document>
